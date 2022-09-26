@@ -228,7 +228,7 @@ function _PersonalMenu:main_menu()
 			})
 			RageUI.Button("Virer", nil, {}, true, {
 				onSelected = function()
-					local player = ESX.Game.GetClosestPlayer(GetEntityCoords(PlayerPedId()))
+					local player, dst = ESX.Game.GetClosestPlayer(GetEntityCoords(PlayerPedId()))
 					if (dst > 3.0) or (player == -1) then
 						return ESX.ShowNotification("Aucun joueur à proximité")
 					end
@@ -237,7 +237,7 @@ function _PersonalMenu:main_menu()
 			})
 			RageUI.Button("Promouvoir", nil, {}, true, {
 				onSelected = function()
-					local player = ESX.Game.GetClosestPlayer(GetEntityCoords(PlayerPedId()))
+					local player, dst = ESX.Game.GetClosestPlayer(GetEntityCoords(PlayerPedId()))
 					if (dst > 3.0) or (player == -1) then
 						return ESX.ShowNotification("Aucun joueur à proximité")
 					end
@@ -246,7 +246,7 @@ function _PersonalMenu:main_menu()
 			})
 			RageUI.Button("Rétrograder", nil, {}, true, {
 				onSelected = function()
-					local player = ESX.Game.GetClosestPlayer(GetEntityCoords(PlayerPedId()))
+					local player, dst = ESX.Game.GetClosestPlayer(GetEntityCoords(PlayerPedId()))
 					if (dst > 3.0) or (player == -1) then
 						return ESX.ShowNotification("Aucun joueur à proximité")
 					end
